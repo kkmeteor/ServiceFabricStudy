@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <XFiles Include="*Dto.cs;" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.0.456" />
+  </ItemGroup>
+  <Target Name="HelloWorld">
+    <Message Text="Configuration is $(Configuration)" />
+    <Message Text="MSBuildToolsPath is $(MSBuildToolsPath)" />
+    <Message Text="Compile item type contains @(Compile)" />
+    <Message Text="XFiles item type contains @(XFiles)" />
+  </Target>
+
+</Project>
