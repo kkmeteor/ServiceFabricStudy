@@ -1,18 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Fabric;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using MetaDataTransferModels;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
+using Microsoft.ServiceFabric.Services.Remoting.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using Newtonsoft.Json;
 
 namespace MetaDataTransferTool
 {
     /// <summary>
     /// An instance of this class is created for each service instance by the Service Fabric runtime.
     /// </summary>
-    internal sealed class MetaDataTransferTool : StatelessService
+    internal sealed class MetaDataTransferTool : StatelessService, IJsonTestService
     {
         public MetaDataTransferTool(StatelessServiceContext context)
             : base(context)
@@ -24,7 +26,7 @@ namespace MetaDataTransferTool
         /// <returns>A collection of listeners.</returns>
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
         {
-            return new ServiceInstanceListener[0];
+            return this.CreateServiceRemotingInstanceListeners();
         }
 
         /// <summary>
@@ -46,6 +48,21 @@ namespace MetaDataTransferTool
 
                 await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
             }
+        }
+
+        public Task<string> GetJsonFromObj(People obj)
+        {
+            return Task.FromResult<string>(JsonConvert.SerializeObject(obj));
+        }
+
+        public Task<People> GetObjFromJson(string json)
+        {
+            return Task.FromResult<People>(JsonConvert.DeserializeAnonymousType(json, default(People)));
+        }
+
+        public Task<string> SayHello(string msg)
+        {
+            return Task.FromResult<string>($"Hello world:{msg}");
         }
     }
 }

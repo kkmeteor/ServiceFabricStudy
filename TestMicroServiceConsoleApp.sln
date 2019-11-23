@@ -1,19 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMicroServiceConsoleApp", "TestMicroServiceConsoleApp\TestMicroServiceConsoleApp.csproj", "{9EF399DF-0E25-44AF-8B9A-3479F8433884}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaDataTransferModels", "MetaDataTransferModels\MetaDataTransferModels.csproj", "{50562724-15C7-4807-8B38-FAEF842DF62D}"
 EndProject
-Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "MetaDataTransferServiceFabricApplication", "MetaDataTransferServiceFabricApplication\MetaDataTransferServiceFabricApplication.sfproj", "{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaDataTransferTool", "MetaDataTransferTool\MetaDataTransferTool.csproj", "{D948C655-4C99-4396-9BD6-5834F1ED8C31}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaDataTransferStateless", "Stateless1\MetaDataTransferStateless.csproj", "{A88B23C7-5F9D-43A6-9759-24D2D7179A50}"
 EndProject
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "TestServiceFabricApplication", "TestServiceFabricApplication\TestServiceFabricApplication.sfproj", "{43519C99-B1A1-408B-A5A3-E6AB561D6BC7}"
+EndProject
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "MetaDataTransferServiceFabricApplication", "MetaDataTransferServiceFabricApplication\MetaDataTransferServiceFabricApplication.sfproj", "{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetaDataTransferTool", "MetaDataTransferTool\MetaDataTransferTool.csproj", "{F921A599-3B32-4C04-B74A-40F8DC66AB1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service1", "Service1", "{EC6E9D5D-B310-4839-9384-3D83231E6606}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service2", "Service2", "{1B72D251-132E-4350-BDAE-E2F19D998F17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,22 +43,6 @@ Global
 		{50562724-15C7-4807-8B38-FAEF842DF62D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50562724-15C7-4807-8B38-FAEF842DF62D}.Release|x64.ActiveCfg = Release|Any CPU
 		{50562724-15C7-4807-8B38-FAEF842DF62D}.Release|x64.Build.0 = Release|Any CPU
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|x64.ActiveCfg = Debug|x64
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|x64.Build.0 = Debug|x64
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|x64.Deploy.0 = Debug|x64
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|Any CPU.ActiveCfg = Release|x64
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|x64.ActiveCfg = Release|x64
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|x64.Build.0 = Release|x64
-		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|x64.Deploy.0 = Release|x64
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Debug|x64.Build.0 = Debug|Any CPU
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Release|x64.ActiveCfg = Release|Any CPU
-		{D948C655-4C99-4396-9BD6-5834F1ED8C31}.Release|x64.Build.0 = Release|Any CPU
 		{A88B23C7-5F9D-43A6-9759-24D2D7179A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A88B23C7-5F9D-43A6-9759-24D2D7179A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A88B23C7-5F9D-43A6-9759-24D2D7179A50}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -71,9 +59,31 @@ Global
 		{43519C99-B1A1-408B-A5A3-E6AB561D6BC7}.Release|x64.ActiveCfg = Release|x64
 		{43519C99-B1A1-408B-A5A3-E6AB561D6BC7}.Release|x64.Build.0 = Release|x64
 		{43519C99-B1A1-408B-A5A3-E6AB561D6BC7}.Release|x64.Deploy.0 = Release|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|x64.ActiveCfg = Debug|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|x64.Build.0 = Debug|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Debug|x64.Deploy.0 = Debug|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|Any CPU.ActiveCfg = Release|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|x64.ActiveCfg = Release|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|x64.Build.0 = Release|x64
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0}.Release|x64.Deploy.0 = Release|x64
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Debug|x64.Build.0 = Debug|Any CPU
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Release|x64.ActiveCfg = Release|Any CPU
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A88B23C7-5F9D-43A6-9759-24D2D7179A50} = {EC6E9D5D-B310-4839-9384-3D83231E6606}
+		{43519C99-B1A1-408B-A5A3-E6AB561D6BC7} = {EC6E9D5D-B310-4839-9384-3D83231E6606}
+		{9AEA6B8E-B33F-459F-8B58-6C8BA317D9C0} = {1B72D251-132E-4350-BDAE-E2F19D998F17}
+		{F921A599-3B32-4C04-B74A-40F8DC66AB1D} = {1B72D251-132E-4350-BDAE-E2F19D998F17}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5171A56F-8ED0-4BA2-88AB-A9C8351CFA14}
