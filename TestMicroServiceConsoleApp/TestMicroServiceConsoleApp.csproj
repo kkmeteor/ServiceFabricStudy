@@ -16,7 +16,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.0.456" />
     <PackageReference Include="Microsoft.ServiceFabric.Services.Remoting" Version="3.0.456" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
